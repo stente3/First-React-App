@@ -10,6 +10,7 @@ interface CardStructure {
   paragraph: string;
   color: 'orange' | 'blue' | 'green';
 }
+
 const card1: CardStructure = {
   image: image1,
   heading: 'Sedans',

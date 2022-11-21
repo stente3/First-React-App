@@ -93,9 +93,6 @@
   .card__paragraph {
     margin: 0;
   }
-  /* .button { */
-  /*   margin: 5rem 0 0 0; */
-  /* } */
 }
 @media (min-width: 1440px) {
   .App {
