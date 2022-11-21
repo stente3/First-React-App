@@ -3,6 +3,7 @@ import image2 from './assets/suvs.svg';
 import image3 from './assets/luxury.svg';
 
 import './App.css';
+import Card from './components/card';
 
 interface CardStructure {
   image: string;
@@ -32,28 +33,6 @@ const card3: CardStructure = {
     'Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.',
   color: 'green',
 };
-
-function Card({ image, heading, paragraph, color }: CardStructure) {
-  return (
-    <div
-      className={
-        'card ' +
-        (color === 'orange'
-          ? 'bg-orange'
-          : color === 'blue'
-          ? 'bg-blue'
-          : color === 'green'
-          ? 'bg-green'
-          : '')
-      }
-    >
-      <img className='card__image' src={image} alt={heading} />
-      <h3 className='card__heading'>{heading.toUpperCase()}</h3>
-      <p className='card__paragraph'>{paragraph}</p>
-      <button className={'button ' + 'button--' + color}>Learn More</button>
-    </div>
-  );
-}
 
 function App() {
   return (
