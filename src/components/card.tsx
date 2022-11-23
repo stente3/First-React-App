@@ -1,4 +1,4 @@
-interface CardStructure {
+export interface CardStructure {
   image: string;
   heading: string;
   paragraph: string;
@@ -27,4 +27,4 @@ function Card({ image, heading, paragraph, color }: CardStructure) {
   );
 }
 
-export default Card;
+export { Card };

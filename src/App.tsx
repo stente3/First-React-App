@@ -3,14 +3,7 @@ import image2 from './assets/suvs.svg';
 import image3 from './assets/luxury.svg';
 
 import './App.css';
-import Card from './components/card';
-
-interface CardStructure {
-  image: string;
-  heading: string;
-  paragraph: string;
-  color: 'orange' | 'blue' | 'green';
-}
+import { Card, CardStructure } from './components/card';
 
 const card1: CardStructure = {
   image: image1,
