@@ -1,13 +1,15 @@
 export interface CardStructure {
+  id: number;
   image: string;
   heading: string;
   paragraph: string;
   color: 'orange' | 'blue' | 'green';
 }
 
-function Card({ image, heading, paragraph, color }: CardStructure) {
+function Card({ id, image, heading, paragraph, color }: CardStructure) {
   return (
     <div
+      key={id}
       className={
         'card ' +
         (color === 'orange'
