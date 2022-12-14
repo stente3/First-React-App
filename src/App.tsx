@@ -3,53 +3,52 @@ import image2 from './assets/suvs.svg';
 import image3 from './assets/luxury.svg';
 
 import './App.css';
-import { Card, CardStructure } from './components/card';
+import { Card, CardStructure } from './components/Card';
 
-const card1: CardStructure = {
-  image: image1,
-  heading: 'Sedans',
-  paragraph:
-    'Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.',
-  color: 'orange',
-};
-const card2: CardStructure = {
-  image: image2,
-  heading: 'Suvs',
-  paragraph:
-    'Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.',
-  color: 'blue',
-};
-const card3: CardStructure = {
-  image: image3,
-  heading: 'Luxury',
-  paragraph:
-    'Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.',
-  color: 'green',
-};
+const cards: CardStructure[] = [
+  {
+    id: 1,
+    image: image1,
+    heading: 'Sedans',
+    paragraph:
+      'Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.',
+    color: 'orange',
+  },
+  {
+    id: 2,
+    image: image2,
+    heading: 'Suvs',
+    paragraph:
+      'Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.',
+    color: 'blue',
+  },
+  {
+    id: 3,
+    image: image3,
+    heading: 'Luxury',
+    paragraph:
+      'Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.',
+    color: 'green',
+  },
+];
 
-function App() {
+const App = () => {
   return (
     <div className='App'>
-      <Card
-        image={card1.image}
-        heading={card1.heading}
-        paragraph={card1.paragraph}
-        color={card1.color}
-      />
-      <Card
-        image={card2.image}
-        heading={card2.heading}
-        paragraph={card2.paragraph}
-        color={card2.color}
-      />
-      <Card
-        image={card3.image}
-        heading={card3.heading}
-        paragraph={card3.paragraph}
-        color={card3.color}
-      />
+      {cards.map(({ id, image, heading, paragraph, color }: CardStructure) => {
+        return (
+          <Card
+            key={id}
+            id={id}
+            image={image}
+            heading={heading}
+            paragraph={paragraph}
+            color={color}
+          />
+        );
+      })}
     </div>
   );
-}
+};
 
 export default App;
