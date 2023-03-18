@@ -71,7 +71,7 @@ The-project/ <br>
    ```
 
 ## Usage
-To download all project dependencies.
+To download all project dependencies
    ```sh
    npm install
    ```
@@ -83,7 +83,7 @@ To build for production
    ```sh
    npm run build
    ```
-To Locally previes production build
+To local preview of production build
    ```sh
    npm run preview
    ```
